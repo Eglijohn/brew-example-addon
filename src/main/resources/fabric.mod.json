@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "brew-example-addon",
+  "version": "${version}",
+  "name": "Brew Example Addon",
+  "description": "A brew addon for the drunks",
+  "authors": [ "Eglijohn" ],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "brew": [
+      "me.egli.brewExampleAddon.BrewExampleAddon"
+    ]
+  },
+  "mixins": [
+    "brew-example-addon.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
