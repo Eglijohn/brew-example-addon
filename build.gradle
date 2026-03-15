@@ -37,13 +37,13 @@ repositories {
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Ignore this :3
-    modImplementation files("dependencies/BrewHack-2.5.0.jar")
+    modImplementation files("dependencies/BrewHack.jar")
     modImplementation files("dependencies/litematica.jar")
     modImplementation files("dependencies/malilib.jar")
 

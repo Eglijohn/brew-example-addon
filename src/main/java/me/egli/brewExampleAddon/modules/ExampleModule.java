@@ -9,10 +9,10 @@ import me.egli.brewhack.core.setting.SettingCategory;
 import me.egli.brewhack.core.setting.settings.BooleanSetting;
 import me.egli.brewhack.core.setting.settings.ColorSetting;
 import me.egli.brewhack.render.RenderUtils;
+import me.egli.brewhack.util.color.Color;
 import me.egli.brewhack.util.misc.ChatUtils;
-import me.egli.brewhack.util.misc.Color;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.AABB;
 
 public class ExampleModule extends Module {
     public ExampleModule() {
@@ -59,7 +59,7 @@ public class ExampleModule extends Module {
 
     @EventHandler
     public void onRender(Render3DEvent event) {
-        Box box = new Box(new BlockPos(0, 100, 0));
+        AABB box = new AABB(new BlockPos(0, 100, 0));
 
         RenderUtils.renderBox(event, box, sideColor.get(), lineColor.get(), 1, true);
     }

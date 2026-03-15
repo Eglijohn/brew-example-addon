@@ -3,8 +3,8 @@ package me.egli.brewExampleAddon.commands;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import me.egli.brewhack.core.command.DotCommand;
-import me.egli.brewhack.util.misc.Notifications;
-import net.minecraft.command.CommandSource;
+import me.egli.brewhack.render.Notifications;
+import net.minecraft.commands.SharedSuggestionProvider;
 
 public class ExampleCommand extends DotCommand {
     public ExampleCommand() {
@@ -12,7 +12,7 @@ public class ExampleCommand extends DotCommand {
     }
 
     @Override
-    public void build(LiteralArgumentBuilder<CommandSource> literalArgumentBuilder) {
+    public void build(LiteralArgumentBuilder<SharedSuggestionProvider> literalArgumentBuilder) {
         literalArgumentBuilder.then(argument("message", StringArgumentType.greedyString())
                 .executes(ctx -> {
                     String message = StringArgumentType.getString(ctx, "message");
