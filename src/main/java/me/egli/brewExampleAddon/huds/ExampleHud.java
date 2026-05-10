@@ -14,7 +14,7 @@ public class ExampleHud extends HudModule {
         super("example", "Example HUD Module");
     }
 
-    private final SettingCategory sgGeneral = SettingCategory.getDefault();
+    private final SettingCategory sgGeneral = SettingCategory.getGeneral();
 
     private final Setting<Color> textColor = sgGeneral.add(new ColorSetting.Builder()
             .name("text-color")

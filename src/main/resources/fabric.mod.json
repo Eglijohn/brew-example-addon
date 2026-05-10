@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "Brew Example Addon",
   "description": "A brew addon for the drunks",
-  "authors": [ "Eglijohn" ],
+  "authors": [ "Eglijohn", "Marc3D" ],
   "contact": {},
   "license": "All-Rights-Reserved",
   "environment": "client",
@@ -19,6 +19,7 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric-api": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "brewhack": "*"
   }
 }

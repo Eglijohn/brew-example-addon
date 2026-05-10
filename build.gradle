@@ -42,13 +42,22 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // Ignore this :3
-    modImplementation files("dependencies/BrewHack.jar")
-    modImplementation files("dependencies/litematica.jar")
-    modImplementation files("dependencies/malilib.jar")
+    modApi files("dependency/BrewHack.jar")
 
-    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.1'
-    include "org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.1"
+    modImplementation "xaero.lib:xaerolib-fabric-1.21.11:1.0.44"
+
+
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5'
+    include "org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5"
+
+    implementation "io.github.big-iron-cheems:Kanal:0.2.0"
+
+    implementation "org.java-websocket:Java-WebSocket:1.5.7"
+
+    implementation 'meteordevelopment:discord-ipc:1.1'
+    implementation 'org.hid4java:hid4java:0.8.0'
+    implementation "io.github.humbleui:types:0.2.0"
+    implementation "io.github.humbleui:skija-shared:0.116.2"
 }
 
 processResources {
@@ -64,7 +73,7 @@ processResources {
     }
 }
 
-def targetJavaVersion = 21
+def targetJavaVersion = 25
 tasks.withType(JavaCompile).configureEach {
     // ensure that the encoding is set to UTF-8, no matter what the system default is
     // this fixes some edge cases with special characters not displaying correctly

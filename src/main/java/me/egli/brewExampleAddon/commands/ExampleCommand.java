@@ -3,7 +3,7 @@ package me.egli.brewExampleAddon.commands;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import me.egli.brewhack.core.command.DotCommand;
-import me.egli.brewhack.render.Notifications;
+import me.egli.brewhack.util.ui.Notifications;
 import net.minecraft.commands.SharedSuggestionProvider;
 
 public class ExampleCommand extends DotCommand {
