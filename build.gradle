@@ -58,6 +58,7 @@ dependencies {
     implementation 'org.hid4java:hid4java:0.8.0'
     implementation "io.github.humbleui:types:0.2.0"
     implementation "io.github.humbleui:skija-shared:0.116.2"
+    implementation 'com.github.Marccccccccccccccc:brew-eventbus:-SNAPSHOT'
 }
 
 processResources {
